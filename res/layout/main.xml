@@ -7,5 +7,10 @@
         android:id="@+id/welcome_text_view"
         android:text="@string/WELCOME_STRING"
         style="@style/MatchWidth"/>
+
+    <ImageView
+        android:id="@+id/sun_earth_image"
+        android:src="@drawable/sun_earth"
+        style="@style/Wrap"/>
 </LinearLayout>
 

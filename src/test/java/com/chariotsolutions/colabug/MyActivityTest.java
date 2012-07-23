@@ -44,4 +44,9 @@ public class MyActivityTest {
         assertThat(welcomeText.getText().toString(),
                    equalTo(getResourceString(R.string.WELCOME_STRING)));
     }
+
+    @Test
+    public void shouldHaveImage() throws Exception {
+        assertViewIsVisible(activity.findViewById(R.id.sun_earth_image));
+    }
 }
