@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ChariotBlog</string>
+    <string name="WELCOME_STRING">Hello World, MyActivity</string>
 </resources>

@@ -62,7 +62,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.javassist:javassist:3.14.0-GA" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.google.android:support-v4:r6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.8.2" level="project" />
-    <orderEntry type="jdk" jdkName="Android 2.2 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android 2.3.3 Platform" jdkType="Android SDK" />
   </component>
 </module>
 

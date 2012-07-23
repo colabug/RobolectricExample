@@ -1,0 +1,14 @@
+<resources>
+    <style name="Match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="MatchWidth" parent="Match">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MatchVertical" parent="Match">
+        <item name="android:orientation">vertical</item>
+    </style>
+</resources>
