@@ -1,18 +1,15 @@
 package com.chariotsolutions.colabug;
 
-import android.view.View;
-
-import com.xtremelabs.robolectric.RobolectricTestRunner;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
+import support.ProjectTestRunner;
 
-@RunWith(RobolectricTestRunner.class)
+import static org.junit.Assert.assertNotNull;
+import static support.ProjectTestRunner.assertViewIsVisible;
+
+@RunWith(ProjectTestRunner.class)
 
 public class MyActivityTest {
 
@@ -31,7 +28,6 @@ public class MyActivityTest {
 
     @Test
     public void shouldHaveWelcomeText() throws Exception {
-        assertThat(activity.findViewById(R.id.welcome_text_view).getVisibility(),
-                   equalTo(View.VISIBLE));
+        assertViewIsVisible(activity.findViewById(R.id.welcome_text_view));
     }
 }
