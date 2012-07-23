@@ -20,10 +20,17 @@ public class MyActivity extends Activity
             }
         });
 
-        View button = findViewById(R.id.next_screen_button);
+        final View button = findViewById(R.id.next_screen_button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 startActivity(NewActivity.createIntent(MyActivity.this));
+            }
+        });
+
+        View image = findViewById(R.id.sun_earth_image);
+        image.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                button.setVisibility(View.VISIBLE);
             }
         });
     }

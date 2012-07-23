@@ -30,4 +30,9 @@ public class ProjectTestRunner extends RobolectricTestRunner {
         assertNotNull(view);
         assertThat(view.getVisibility(), equalTo(View.VISIBLE));
     }
+
+    public static void assertViewIsHidden(View view) {
+        assertNotNull(view);
+        assertThat(view.getVisibility(), equalTo(View.GONE));
+    }
 }

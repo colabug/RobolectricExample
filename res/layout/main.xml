@@ -16,6 +16,7 @@
 
     <Button
         android:id="@+id/next_screen_button"
+        android:visibility="gone"
         android:text="@string/NEXT_BUTTON_TEXT"
         style="@style/Wrap"/>
 </LinearLayout>

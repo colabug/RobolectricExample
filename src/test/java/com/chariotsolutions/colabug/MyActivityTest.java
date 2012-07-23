@@ -19,6 +19,7 @@ import static com.xtremelabs.robolectric.shadows.ShadowToast.getTextOfLatestToas
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
+import static support.ProjectTestRunner.assertViewIsHidden;
 import static support.ProjectTestRunner.assertViewIsVisible;
 import static support.ProjectTestRunner.getResourceDrawable;
 import static support.ProjectTestRunner.getResourceString;
@@ -77,7 +78,13 @@ public class MyActivityTest {
     }
 
     @Test
-    public void shouldHaveButton() throws Exception {
+    public void shouldHaveHiddenButton() throws Exception {
+        assertViewIsHidden(button);
+    }
+
+    @Test
+    public void shouldShowButtonAfterImageClick() throws Exception {
+        image.performClick();
         assertViewIsVisible(button);
     }
 
