@@ -4,6 +4,7 @@
     style="@style/MatchVertical">
 
     <TextView
+        android:id="@+id/welcome_text_view"
         android:text="@string/WELCOME_STRING"
         style="@style/MatchWidth"/>
 </LinearLayout>
