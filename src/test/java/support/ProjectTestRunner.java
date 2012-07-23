@@ -1,5 +1,6 @@
 package support;
 
+import android.graphics.drawable.Drawable;
 import android.view.View;
 
 import com.xtremelabs.robolectric.Robolectric;
@@ -19,6 +20,10 @@ public class ProjectTestRunner extends RobolectricTestRunner {
 
     public static String getResourceString(int resourceId) {
         return Robolectric.application.getApplicationContext().getString(resourceId);
+    }
+
+    public static Drawable getResourceDrawable(int resourceId) {
+        return Robolectric.application.getApplicationContext().getResources().getDrawable(resourceId);
     }
 
     public static void assertViewIsVisible(View view) {

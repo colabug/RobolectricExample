@@ -1,5 +1,6 @@
 package com.chariotsolutions.colabug;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.junit.Before;
@@ -12,6 +13,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 import static support.ProjectTestRunner.assertViewIsVisible;
+import static support.ProjectTestRunner.getResourceDrawable;
 import static support.ProjectTestRunner.getResourceString;
 
 @RunWith(ProjectTestRunner.class)
@@ -20,6 +22,7 @@ public class MyActivityTest {
 
     private MyActivity activity;
     private TextView welcomeText;
+    private ImageView image;
 
     @Before
     public void setUp() throws Exception {
@@ -27,6 +30,7 @@ public class MyActivityTest {
         activity.onCreate(null);
 
         welcomeText = (TextView) activity.findViewById(R.id.welcome_text_view);
+        image = (ImageView) activity.findViewById(R.id.sun_earth_image);
     }
 
     @Test
@@ -47,6 +51,12 @@ public class MyActivityTest {
 
     @Test
     public void shouldHaveImage() throws Exception {
-        assertViewIsVisible(activity.findViewById(R.id.sun_earth_image));
+        assertViewIsVisible(image);
+    }
+
+    @Test
+    public void imageShouldEqualResourceDrawable() throws Exception {
+        assertThat(image.getDrawable(),
+                   equalTo(getResourceDrawable(R.drawable.sun_earth)));
     }
 }
