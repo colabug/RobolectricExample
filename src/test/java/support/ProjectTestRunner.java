@@ -2,6 +2,7 @@ package support;
 
 import android.view.View;
 
+import com.xtremelabs.robolectric.Robolectric;
 import com.xtremelabs.robolectric.RobolectricTestRunner;
 
 import org.junit.runners.model.InitializationError;
@@ -14,6 +15,10 @@ public class ProjectTestRunner extends RobolectricTestRunner {
 
     public ProjectTestRunner(Class<?> testClass) throws InitializationError {
         super(testClass);
+    }
+
+    public static String getResourceString(int resourceId) {
+        return Robolectric.application.getApplicationContext().getString(resourceId);
     }
 
     public static void assertViewIsVisible(View view) {
