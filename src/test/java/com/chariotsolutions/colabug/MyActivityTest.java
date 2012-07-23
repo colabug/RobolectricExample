@@ -2,6 +2,9 @@ package com.chariotsolutions.colabug;
 
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.xtremelabs.robolectric.shadows.ShadowToast;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,6 +12,8 @@ import org.junit.runner.RunWith;
 
 import support.ProjectTestRunner;
 
+import static com.xtremelabs.robolectric.shadows.ShadowToast.getLatestToast;
+import static com.xtremelabs.robolectric.shadows.ShadowToast.getTextOfLatestToast;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
@@ -50,6 +55,13 @@ public class MyActivityTest {
     }
 
     @Test
+    public void welcomeTextClickShouldToastUser() throws Exception {
+        welcomeText.performClick();
+        assertThat(getTextOfLatestToast(),
+                   equalTo(getResourceString(R.string.WELCOME_TOAST)));
+    }
+
+    @Test
     public void shouldHaveImage() throws Exception {
         assertViewIsVisible(image);
     }
@@ -58,5 +70,14 @@ public class MyActivityTest {
     public void imageShouldEqualResourceDrawable() throws Exception {
         assertThat(image.getDrawable(),
                    equalTo(getResourceDrawable(R.drawable.sun_earth)));
+    }
+
+    @Test
+    public void shortToast_shouldToastStringPassedForShortDuration() throws Exception {
+        String testString = "Test string";
+        activity.shortToast(testString);
+        assertThat(getTextOfLatestToast(), equalTo(testString));
+        assertThat(getLatestToast().getDuration(),
+                   equalTo(Toast.LENGTH_SHORT));
     }
 }
