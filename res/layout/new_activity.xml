@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchVertical">
+
+    <Button
+        android:id="@+id/back_screen_button"
+        android:text="@string/BACK_BUTTON_TEXT"
+        style="@style/Wrap"/>
+</LinearLayout>

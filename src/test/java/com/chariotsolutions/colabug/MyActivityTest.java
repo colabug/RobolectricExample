@@ -1,9 +1,12 @@
 package com.chariotsolutions.colabug;
 
+import android.content.Intent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.xtremelabs.robolectric.matchers.StartedMatcher;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -27,6 +30,7 @@ public class MyActivityTest {
     private MyActivity activity;
     private TextView welcomeText;
     private ImageView image;
+    private View button;
 
     @Before
     public void setUp() throws Exception {
@@ -35,6 +39,7 @@ public class MyActivityTest {
 
         welcomeText = (TextView) activity.findViewById(R.id.welcome_text_view);
         image = (ImageView) activity.findViewById(R.id.sun_earth_image);
+        button = activity.findViewById(R.id.next_screen_button);
     }
 
     @Test
@@ -73,7 +78,14 @@ public class MyActivityTest {
 
     @Test
     public void shouldHaveButton() throws Exception {
-        assertViewIsVisible(activity.findViewById(R.id.next_screen_button));
+        assertViewIsVisible(button);
+    }
+
+    @Test
+    public void buttonClickShouldStartNewActivity() throws Exception {
+        button.performClick();
+        Intent intent = NewActivity.createIntent(activity);
+        assertThat(activity, new StartedMatcher(intent));
     }
 
     @Test

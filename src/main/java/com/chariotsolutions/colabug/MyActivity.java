@@ -19,6 +19,13 @@ public class MyActivity extends Activity
                 shortToast(getResources().getString(R.string.WELCOME_TOAST));
             }
         });
+
+        View button = findViewById(R.id.next_screen_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                startActivity(NewActivity.createIntent(MyActivity.this));
+            }
+        });
     }
 
     public void shortToast(String string) {

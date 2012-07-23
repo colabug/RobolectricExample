@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Screens-->
     <string name="app_name">ChariotBlog</string>
+    <string name="new_activity">New Activity</string>
+
     <string name="WELCOME_STRING">Hello World, MyActivity</string>
     <string name="WELCOME_TOAST">Toasting, toasting …</string>
     <string name="NEXT_BUTTON_TEXT">Next Screen</string>
+    <string name="BACK_BUTTON_TEXT">Back</string>
 </resources>
