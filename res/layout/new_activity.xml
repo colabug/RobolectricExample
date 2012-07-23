@@ -4,7 +4,7 @@
     style="@style/MatchVertical">
 
     <Button
-        android:id="@+id/back_screen_button"
-        android:text="@string/BACK_BUTTON_TEXT"
+        android:id="@+id/crazy_button"
+        android:text="@string/CRAZY_BUTTON_TEXT"
         style="@style/Wrap"/>
 </LinearLayout>
