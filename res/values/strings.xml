@@ -3,4 +3,5 @@
     <string name="app_name">ChariotBlog</string>
     <string name="WELCOME_STRING">Hello World, MyActivity</string>
     <string name="WELCOME_TOAST">Toasting, toasting …</string>
+    <string name="NEXT_BUTTON_TEXT">Next Screen</string>
 </resources>

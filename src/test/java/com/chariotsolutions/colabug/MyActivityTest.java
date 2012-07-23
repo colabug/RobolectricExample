@@ -4,7 +4,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xtremelabs.robolectric.shadows.ShadowToast;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -70,6 +69,11 @@ public class MyActivityTest {
     public void imageShouldEqualResourceDrawable() throws Exception {
         assertThat(image.getDrawable(),
                    equalTo(getResourceDrawable(R.drawable.sun_earth)));
+    }
+
+    @Test
+    public void shouldHaveButton() throws Exception {
+        assertViewIsVisible(activity.findViewById(R.id.next_screen_button));
     }
 
     @Test

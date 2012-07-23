@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     style="@style/MatchVertical">
 
@@ -11,6 +12,11 @@
     <ImageView
         android:id="@+id/sun_earth_image"
         android:src="@drawable/sun_earth"
+        style="@style/Wrap"/>
+
+    <Button
+        android:id="@+id/next_screen_button"
+        android:text="@string/NEXT_BUTTON_TEXT"
         style="@style/Wrap"/>
 </LinearLayout>
 
